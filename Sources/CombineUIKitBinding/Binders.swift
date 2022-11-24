@@ -9,7 +9,7 @@ import Foundation
 
 public struct Binders<Target> {
     
-    private let target: Target
+    public let target: Target
     
     init(target: Target) {
         self.target = target
