@@ -28,8 +28,8 @@ class ExampleViewController: UIViewController {
 }
 ```
 
-## Why it's better than Combine's assign(to:on:)
-1. You can use weak reference to the target object while assign(to:on:) keeps a strong reference.
+## Why it's better than Combine's `assign(to\:on\:)`
+1. You can use weak reference to the target object while `assign(to\:on\:)` keeps a strong reference.
 1. You can pass parameters when creating bindings
 1. You can add custom binders without adding properties to the target class
 
