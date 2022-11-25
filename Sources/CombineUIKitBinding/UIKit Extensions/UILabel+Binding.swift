@@ -12,6 +12,6 @@ extension UILabel: BindingTarget {}
 public extension Binders where Target: UILabel {
     
     var text: Binder<String?> {
-        WeakBinder(target: target, queue: .main) { label, text in label.text = text }
+        WeakBinder(target: target) { label, text in label.text = text }
     }
 }
