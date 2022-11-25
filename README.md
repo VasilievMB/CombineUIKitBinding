@@ -31,27 +31,27 @@ class ExampleViewController: UIViewController {
 ## Why it's better than Combine's `assign(to:on:)`
 1. You can use weak reference to the target object while `assign(to:on:)` keeps a strong reference.
 1. You can pass parameters when creating bindings:
-```swift
-$text.bind(to: button.binders.title(for: .normal))
-```
+    ```swift
+    $text.bind(to: button.binders.title(for: .normal))
+    ```
 1. You can add custom binders without adding properties to the target class:
-```swift
-struct ButtonStyle {
-    
-    let titleColor: UIColor
-    let backgroundImage: UIImage
-}
+    ```swift
+    struct ButtonStyle {
+        
+        let titleColor: UIColor
+        let backgroundImage: UIImage
+    }
 
-extension Binders where Target: UIButton {
-    
-    func style(for state: UIControl.State) -> Binder<ButtonStyle> {
-        WeakBinder(target: target, queue: .main) { button, style in
-            button.setTitleColor(style.titleColor, for: state)
-            button.setBackgroundImage(style.backgroundImage, for: state)
+    extension Binders where Target: UIButton {
+        
+        func style(for state: UIControl.State) -> Binder<ButtonStyle> {
+            WeakBinder(target: target, queue: .main) { button, style in
+                button.setTitleColor(style.titleColor, for: state)
+                button.setBackgroundImage(style.backgroundImage, for: state)
+            }
         }
     }
-}
-```
+    ```
 
 ## License
 CombineUIKitBinding is available under the MIT license. See the LICENSE file for more info.
