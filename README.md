@@ -1,5 +1,5 @@
 # CombineUIKitBinding
- A little framework for binding data to UIKit views using Combine
+ A little framework for binding data to UIKit views using Combine (inspired by RxCocoa)
  
 ## Installation
 Go to Xcode > File > Add Packages..., enter the URL to this repository, select dependency rule and project and click 'Add Package'.
