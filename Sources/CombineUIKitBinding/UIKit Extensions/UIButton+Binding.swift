@@ -1,13 +1,11 @@
 //
-//  File.swift
+//  UIButton+Binding.swift
 //  
 //
 //  Created by Mikhail on 25.11.2022.
 //
 
 import UIKit
-
-extension UIButton: BindingTarget {}
 
 public extension Binders where Target: UIButton {
     
